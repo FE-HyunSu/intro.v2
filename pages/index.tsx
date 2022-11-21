@@ -1,5 +1,11 @@
+import Sample from '../components/sample/body';
+
 const Index = () => {
-  return <div>index</div>;
+  return (
+    <>
+      <Sample />
+    </>
+  );
 };
 
 export default Index;
