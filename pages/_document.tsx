@@ -1,5 +1,11 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -8,7 +14,8 @@ class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -31,7 +38,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
+          <link rel="shortcut icon" href="/favicon.ico" type="image/svg" />
           <meta property="og:title" content="" />
           <meta property="og:image" content="" />
           <meta property="og:description" content="" />
@@ -51,6 +58,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <div id="_modal"></div>
           <NextScript />
         </body>
       </Html>

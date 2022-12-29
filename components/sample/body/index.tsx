@@ -3,7 +3,7 @@ import { SampleBody } from './style';
 const Sample = () => {
   return (
     <>
-      <SampleBody>Sample body</SampleBody>
+      <SampleBody>header</SampleBody>
     </>
   );
 };
